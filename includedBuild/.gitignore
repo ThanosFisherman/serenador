@@ -1,0 +1,7 @@
+dependencies/build/
+serenador-plugin/build
+/.gradle/
+/dependencies/.gradle/
+/serenador-plugin/.gradle/
+/dependencies/build/
+/serenador-plugin/build/
