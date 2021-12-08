@@ -13,7 +13,8 @@ val phrases = mapOf(
     "Bad News4" to "Don't git commit cause your project is like shit your project manager will be mad a bit",
     "Cello" to "Gradle project fail fail fail oh my god EPIC fail try again tomorrow maybe you get better luck",
     "Cello2" to "In the hall of mountain king I can see your work sink what a sudden failure for your project fa la la",
-    "Cello3" to "Sorry but your coding sucks now it's time for some guts try to ask Patrice because your project gently weeps "
+    "Cello3" to "Sorry but your coding sucks now it's time for some guts try to ask Patrice because your project gently weeps",
+    "Good News" to "Congratulations"
 )
 
 class SerenadorPlugin : Plugin<Project> {
@@ -32,7 +33,7 @@ class SerenadorPlugin : Plugin<Project> {
                     println("assembleDebug Executed")
                     if (state.executed) {
                         project.exec {
-                            commandLine("say", "-v", "Cello", phrases["Cello3"])
+                            commandLine("say", "-v", "Good News", phrases["Good News"])
                         }
                     }
                 }
