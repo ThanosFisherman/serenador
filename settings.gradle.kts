@@ -8,5 +8,5 @@ dependencyResolutionManagement {
 
 rootProject.buildFileName = "build.gradle.kts"
 include(":serenador-sample")
-includeBuild("includedBuild/dependencies")
-includeBuild("includedBuild/serenador-plugin")
+includeBuild("buildLogic/dependencies")
+includeBuild("buildLogic/serenador-plugin")
