@@ -3,7 +3,6 @@ plugins {
     `java-gradle-plugin`
 }
 
-// To make it available as direct dependency
 group = "io.github.thanosfisherman.serenador.dependencies"
 version = "SNAPSHOT"
 

@@ -1,10 +1,13 @@
 package io.github.thanosfisherman.serenador.plugin
 
+import io.github.thanosfisherman.serenador.plugin.commands.Command
+import io.github.thanosfisherman.serenador.plugin.commands.SayCommand
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.execution.TaskExecutionListener
 import org.gradle.api.tasks.TaskState
+import java.io.ByteArrayOutputStream
 
 class SerenadorPlugin : Plugin<Project> {
     override fun apply(project: Project) {
@@ -22,9 +25,15 @@ class SerenadorPlugin : Plugin<Project> {
                     println("assembleDebug Executed")
                     if (state.executed) {
 
-                        project.exec {
-                            commandLine("say", "-v", PhraseBook.phraseList[3].voice, PhraseBook.phraseList[3].text)
+                        val outputText = ByteArrayOutputStream().use { baos ->
+                            project.exec {
+
+                                commandLine("bash", "-c", Command.sayCommandsFailList.random())
+                                standardOutput = baos
+                            }
+                            baos.toString()
                         }
+                        println(outputText)
                     }
                 }
             }

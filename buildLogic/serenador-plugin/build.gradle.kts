@@ -6,7 +6,6 @@ plugins {
     id("dependencies")
 }
 
-// To make it available as direct dependency
 group = "io.github.thanosfisherman.serenador.plugin"
 version = "SNAPSHOT"
 
