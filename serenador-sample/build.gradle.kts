@@ -1,4 +1,5 @@
 import io.github.thanosfisherman.serenador.dependencies.Deps
+
 plugins {
     kotlin("jvm")
     id("dependencies")
@@ -21,5 +22,13 @@ configure<JavaPluginExtension> {
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+}
+serenadorExtension {
+    shutTheFuckUp(false)
+
+    phraseBook {
+        addSuccessPhrase("asd")
+        addFailPhrase("asd")
     }
 }
