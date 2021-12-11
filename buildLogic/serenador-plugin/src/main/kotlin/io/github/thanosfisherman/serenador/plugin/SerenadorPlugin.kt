@@ -1,6 +1,7 @@
 package io.github.thanosfisherman.serenador.plugin
 
 import io.github.thanosfisherman.serenador.plugin.listeners.MyBuildListener
+import org.apache.tools.ant.taskdefs.condition.Os
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -10,6 +11,7 @@ class SerenadorPlugin : Plugin<Project> {
     }
 
     private fun applyTaskExecutorListener(project: Project) {
-        project.gradle.addBuildListener(MyBuildListener(project))
+        if (Os.isFamily(Os.FAMILY_MAC))
+            project.gradle.addBuildListener(MyBuildListener(project))
     }
 }
