@@ -3,6 +3,7 @@ package io.github.thanosfisherman.serenador.plugin
 private const val BAD_NEWS = "Bad News"
 private const val GOOD_NEWS = "Good News"
 private const val CELLO = "Cello"
+private const val BELLS = "Bells"
 
 data class PhraseBook(val voice: String, val text: String)
 
@@ -37,7 +38,11 @@ internal val successPhraseList: List<PhraseBook> =
         ),
         PhraseBook(
             GOOD_NEWS,
-            "Congratulations!"
+            "Congratulations"
+        ),
+        PhraseBook(
+            BELLS,
+            "Your build is done"
         )
     )
 
