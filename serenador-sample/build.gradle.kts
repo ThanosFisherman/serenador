@@ -9,7 +9,7 @@ plugins {
 dependencies {
     implementation(Deps.kotlin)
     testImplementation(Deps.Test.common)
-    testImplementation(Deps.Test.junit)
+    testImplementation(Deps.Test.junit5)
 }
 
 tasks.getByName<Test>("test") {

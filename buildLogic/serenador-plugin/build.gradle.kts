@@ -1,8 +1,12 @@
 import io.github.thanosfisherman.serenador.dependencies.Deps
 
 plugins {
+    //id("org.gradle.kotlin.kotlin-dsl") version "2.1.7"
+    //id("org.jetbrains.kotlin.jvm") version "1.6.0"
     `kotlin-dsl`
     `java-gradle-plugin`
+    id("com.gradle.plugin-publish") version "0.18.0"
+    `maven-publish`
     id("dependencies")
 }
 
@@ -14,7 +18,7 @@ repositories {
     mavenCentral()
 }
 
-tasks.getByName<Test>("test") {
+tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }
 tasks.test {
@@ -32,8 +36,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 dependencies {
     implementation(Deps.kotlinPlugin)
     testImplementation(gradleTestKit())
-    testImplementation(Deps.Test.common)
-    testImplementation(Deps.Test.junit)
+    testImplementation(Deps.Test.junit5)
 }
 
 
