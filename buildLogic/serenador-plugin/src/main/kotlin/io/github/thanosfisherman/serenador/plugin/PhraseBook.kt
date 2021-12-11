@@ -33,7 +33,11 @@ internal val successPhraseList: List<PhraseBook> =
     listOf(
         PhraseBook(
             GOOD_NEWS,
-            "Congratulations"
+            "Congratulations boy your project succeeded"
+        ),
+        PhraseBook(
+            GOOD_NEWS,
+            "Congratulations!"
         )
     )
 
