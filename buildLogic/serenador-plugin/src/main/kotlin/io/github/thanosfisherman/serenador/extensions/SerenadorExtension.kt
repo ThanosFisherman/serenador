@@ -24,7 +24,7 @@ open class SerenadorExtension @Inject constructor(objects: ObjectFactory) {
     }
 
     companion object {
-        fun Project.initSerenadorExtension(): SerenadorExtension {
+        internal fun Project.initSerenadorExtension(): SerenadorExtension {
             return extensions.create("serenadorExtension", SerenadorExtension::class.java)
         }
     }
@@ -35,10 +35,10 @@ open class SerenadorExtension @Inject constructor(objects: ObjectFactory) {
  */
 open class PhraseBookHandler {
     private val successPhrasesMutable = mutableListOf<String>()
-    internal val successPhrases: List<String> = successPhrasesMutable.toList()
+    internal val successPhrases: List<String> get() = successPhrasesMutable.toList()
 
     private val failPhrasesMutable = mutableListOf<String>()
-    internal val failPhrases: List<String> = failPhrasesMutable.toList()
+    internal val failPhrases: List<String> get() = failPhrasesMutable.toList()
 
     fun addSuccessPhrase(phrase: String) {
         successPhrasesMutable.add(phrase)

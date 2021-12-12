@@ -1,5 +1,6 @@
 package io.github.thanosfisherman.serenador
 
+import io.github.thanosfisherman.serenador.extensions.SerenadorExtension
 import io.github.thanosfisherman.serenador.extensions.SerenadorExtension.Companion.initSerenadorExtension
 import io.github.thanosfisherman.serenador.listeners.MyBuildListener
 import org.apache.tools.ant.taskdefs.condition.Os
@@ -13,14 +14,14 @@ class SerenadorPlugin : Plugin<Project> {
 
         project.afterEvaluate {
             if (!serenadorExt.isShutTheFuckUp.getOrElse(false))
-                applyTaskExecutorListener(project)
+                applyTaskExecutorListener(project, serenadorExt)
         }
 
     }
 
-    private fun applyTaskExecutorListener(project: Project) {
+    private fun applyTaskExecutorListener(project: Project, serenadorExt: SerenadorExtension) {
 
         if (Os.isFamily(Os.FAMILY_MAC))
-            project.gradle.addBuildListener(MyBuildListener(project))
+            project.gradle.addBuildListener(MyBuildListener(project, serenadorExt))
     }
 }

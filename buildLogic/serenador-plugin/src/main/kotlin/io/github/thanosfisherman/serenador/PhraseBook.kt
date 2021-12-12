@@ -43,6 +43,9 @@ internal val successPhraseList: List<PhraseBook> =
         PhraseBook(
             BELLS,
             "Your build is done"
+        ),
+        PhraseBook(
+            BELLS,
+            "Ready to go"
         )
     )
-

@@ -27,8 +27,10 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 serenadorExtension {
     shutTheFuckUp(false)
 
-    phraseBook {
-        addSuccessPhrase("asd")
-        addFailPhrase("asd")
-    }
+/*    phraseBook {
+           addSuccessPhrase("Success1")
+           addSuccessPhrase("Success2")
+           addFailPhrase("EPIC FAIL 1")
+           addFailPhrase("EPIC FAIL 2")
+    }*/
 }

@@ -1,6 +1,7 @@
 package io.github.thanosfisherman.serenador
 
 import io.github.thanosfisherman.serenador.commands.Command
+import io.github.thanosfisherman.serenador.commands.SayCommand
 import org.gradle.api.Project
 import org.gradle.process.ExecResult
 
@@ -26,4 +27,9 @@ fun CommandExecutor.executeFailure() {
     if (result.exitValue == 1) {
         execute(Command.sayCommandsFailDefaultVoiceList.random())
     }
+}
+
+fun CommandExecutor.executeCustom(customPhrases: List<String>) {
+    val sayCommandsList = customPhrases.map { SayCommand(it) }
+    execute(sayCommandsList.random())
 }
