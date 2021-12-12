@@ -1,7 +1,3 @@
-import org.gradle.api.Project
-import java.util.*
-import kotlin.collections.LinkedHashMap
-
 object MavenArtifact {
 
     val ARTIFACT_NAME = "serenador-plugin"
@@ -13,7 +9,7 @@ object MavenArtifact {
     val POM_SCM_DEV_CONNECTION = "scm:git:ssh://github.com/ThanosFisherman/serenador.git"
     val POM_ISSUE_URL = "https://github.com/ThanosFisherman/serenador/issues"
     val POM_DESC = "Gradle plugin utilizing text to speech to give you feedback about your project's build state"
-    val TAGS = listOf("gradle", "plugin", "serenador", "kotlin")
+    val TAGS = listOf("serenador", "narrator", "kotlin", "text-to-speech", "plugin")
 
     val GITHUB_REPO = "ThanosFisherman/serenador"
     val GITHUB_README = "README.md"

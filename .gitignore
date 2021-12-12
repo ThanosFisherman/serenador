@@ -2,3 +2,4 @@
 /.idea/**
 /.gradle/
 /serenador-sample/build/
+local.properties

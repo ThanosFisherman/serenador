@@ -1,4 +1,5 @@
 import io.github.thanosfisherman.serenador.dependencies.Deps
+import java.util.*
 
 plugins {
     //id("org.gradle.kotlin.kotlin-dsl") version "2.1.7"
@@ -69,4 +70,21 @@ gradlePlugin {
         description = PluginArtifact.DESCRIPTION
         implementationClass = "io.github.thanosfisherman.serenador.SerenadorPlugin"
     }
+}
+tasks.register("setupPluginKeys") {
+    println(rootProject.projectDir.toString())
+    val propertiesFile = rootProject.file("local.properties")
+    if (propertiesFile.exists() && propertiesFile.canRead()) {
+        val properties = Properties()
+        properties.load(propertiesFile.inputStream())
+        val key = properties.getProperty("gradle.publish.key")
+        val secret = properties.getProperty("gradle.publish.secret")
+        System.setProperty("gradle.publish.key", key)
+        System.setProperty("gradle.publish.secret", secret)
+    } else {
+        throw GradleException("Couldn't find local.properties file in path")
+    }
+}
+tasks.named("publishPlugins") {
+    dependsOn("setupPluginKeys")
 }

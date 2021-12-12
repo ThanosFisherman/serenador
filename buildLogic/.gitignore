@@ -5,3 +5,4 @@ serenador-plugin/build
 /serenador-plugin/.gradle/
 /dependencies/build/
 /serenador-plugin/build/
+/serenador-plugin/local.properties
