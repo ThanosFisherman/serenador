@@ -47,7 +47,22 @@ apply(plugin = "io.github.thanosfisherman.serenador")
 Usage
 ---------
 
-Under Construction...
+You don't really need to do anything else after installing (including) the plugin into your gradle scripts. However some basic configuration is also supported if you want to be adventurous enough!
+
+```kotlin
+serenadorExtension {
+    shutTheFuckUp(true) // makes the plugin shut up
+
+    // you can add your own phrases thus overriding the default ones.
+    // once you do that serenador will use the default voice currently selected in your machine.
+    phraseBook {
+           addSuccessPhrase("Success1")
+           addSuccessPhrase("Success2")
+           addFailPhrase("EPIC FAIL 1")
+           addFailPhrase("EPIC FAIL 2")
+    }
+}
+```
 
 License
 -------
