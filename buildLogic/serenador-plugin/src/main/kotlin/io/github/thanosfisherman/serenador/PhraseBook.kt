@@ -26,7 +26,7 @@ internal val failPhraseList: List<PhraseBook> =
         ),
         PhraseBook(
             CELLO,
-            "Sorry but your coding sucks now it's time for some guts try to call your peeps because your project gently weeps"
+            "Sorry but your coding sucks now it's time for some guts try to ask your peeps because your project gently weeps"
         )
     )
 
