@@ -6,6 +6,14 @@ dependencyResolutionManagement {
     }
 }
 
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+    plugins {}
+}
+
 rootProject.buildFileName = "build.gradle.kts"
 include(":serenador-sample")
 includeBuild("buildLogic/dependencies")
