@@ -23,7 +23,7 @@ Installation
 
 ```kotlin
 plugins {
-  id("io.github.thanosfisherman.serenador") version "1.0
+  id("io.github.thanosfisherman.serenador") version "1.0"
 }
 ```
 
