@@ -1,4 +1,4 @@
-package io.github.thanosfisherman.serenador.plugin.commands
+package io.github.thanosfisherman.serenador.commands
 
 class SayCommand(private val text: String, private val voice: String? = null) : Command() {
     override val arguments: String

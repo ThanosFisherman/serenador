@@ -1,8 +1,8 @@
-package io.github.thanosfisherman.serenador.plugin.listeners
+package io.github.thanosfisherman.serenador.listeners
 
-import io.github.thanosfisherman.serenador.plugin.CommandExecutor
-import io.github.thanosfisherman.serenador.plugin.executeFailure
-import io.github.thanosfisherman.serenador.plugin.executeSuccess
+import io.github.thanosfisherman.serenador.CommandExecutor
+import io.github.thanosfisherman.serenador.executeFailure
+import io.github.thanosfisherman.serenador.executeSuccess
 import org.gradle.BuildListener
 import org.gradle.BuildResult
 import org.gradle.api.Project

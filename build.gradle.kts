@@ -1,6 +1,6 @@
 plugins {
     java
-    kotlin("jvm") version  "1.6.0"
+    kotlin("jvm") version "1.6.0"
 }
 
 buildscript {
@@ -11,6 +11,6 @@ buildscript {
     dependencies {}
 }
 allprojects {
-    group = "io.github.thanosfisherman.serenador"
+    group = "io.github.thanosfisherman.serenador.sample"
     version = "1.0-SNAPSHOT"
 }

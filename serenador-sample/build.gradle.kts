@@ -3,7 +3,7 @@ import io.github.thanosfisherman.serenador.dependencies.Deps
 plugins {
     kotlin("jvm")
     id("dependencies")
-    id("serenador")
+    id("io.github.thanosfisherman.serenador")
 }
 
 dependencies {

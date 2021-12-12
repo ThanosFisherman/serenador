@@ -1,4 +1,4 @@
-package io.github.thanosfisherman.serenador.plugin.extensions
+package io.github.thanosfisherman.serenador.extensions
 
 import org.gradle.api.Action
 import org.gradle.api.Project

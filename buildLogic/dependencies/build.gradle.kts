@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "io.github.thanosfisherman.serenador.dependencies"
-version = "SNAPSHOT"
+version = "1.0"
 
 repositories {
     gradlePluginPortal()

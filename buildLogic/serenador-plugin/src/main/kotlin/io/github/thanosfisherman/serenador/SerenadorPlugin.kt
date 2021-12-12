@@ -1,7 +1,7 @@
-package io.github.thanosfisherman.serenador.plugin
+package io.github.thanosfisherman.serenador
 
-import io.github.thanosfisherman.serenador.plugin.extensions.SerenadorExtension.Companion.initSerenadorExtension
-import io.github.thanosfisherman.serenador.plugin.listeners.MyBuildListener
+import io.github.thanosfisherman.serenador.extensions.SerenadorExtension.Companion.initSerenadorExtension
+import io.github.thanosfisherman.serenador.listeners.MyBuildListener
 import org.apache.tools.ant.taskdefs.condition.Os
 import org.gradle.api.Plugin
 import org.gradle.api.Project

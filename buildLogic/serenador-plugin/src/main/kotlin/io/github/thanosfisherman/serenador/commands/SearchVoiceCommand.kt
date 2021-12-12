@@ -1,4 +1,4 @@
-package io.github.thanosfisherman.serenador.plugin.commands
+package io.github.thanosfisherman.serenador.commands
 
 class SearchVoiceCommand(private val voice: String) : Command() {
     override val arguments: String

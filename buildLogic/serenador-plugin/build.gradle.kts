@@ -10,8 +10,8 @@ plugins {
     id("dependencies")
 }
 
-group = "io.github.thanosfisherman.serenador.plugin"
-version = "1.0-SNAPSHOT"
+group = "io.github.thanosfisherman.serenador"
+version = "1.0"
 
 repositories {
     gradlePluginPortal()
@@ -39,10 +39,34 @@ dependencies {
     testImplementation(Deps.Test.junit5)
 }
 
+// Configuration Block for the Plugin Marker artifact on Plugin Central
+pluginBundle {
+    website = PluginArtifact.WEBSITE
+    vcsUrl = PluginArtifact.VCS_URL
+    description = PluginArtifact.DESCRIPTION
+    tags = PluginArtifact.TAGS
 
+    mavenCoordinates {
+        groupId = MavenArtifact.ARTIFACT_GROUP
+        artifactId = MavenArtifact.ARTIFACT_NAME
+        version = MavenArtifact.VERSION_NAME
+    }
+}
+
+// for Maven local publication only
+publishing {
+    repositories {
+        maven {
+            name = "serenadorLocalRepo"
+            url = uri("../serenador-uri-repo")
+        }
+    }
+}
 gradlePlugin {
-    plugins.create("serenador") {
-        id = "serenador"
-        implementationClass = "io.github.thanosfisherman.serenador.plugin.SerenadorPlugin"
+    plugins.create(PluginArtifact.PLUGIN_NAME) {
+        id = PluginArtifact.PLUGIN_ID
+        displayName = PluginArtifact.DISPLAY_NAME
+        description = PluginArtifact.DESCRIPTION
+        implementationClass = "io.github.thanosfisherman.serenador.SerenadorPlugin"
     }
 }

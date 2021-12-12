@@ -1,7 +1,7 @@
-package io.github.thanosfisherman.serenador.plugin.commands
+package io.github.thanosfisherman.serenador.commands
 
-import io.github.thanosfisherman.serenador.plugin.failPhraseList
-import io.github.thanosfisherman.serenador.plugin.successPhraseList
+import io.github.thanosfisherman.serenador.failPhraseList
+import io.github.thanosfisherman.serenador.successPhraseList
 
 
 abstract class Command {

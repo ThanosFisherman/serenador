@@ -1,4 +1,4 @@
-package io.github.thanosfisherman.serenador.plugin
+package io.github.thanosfisherman.serenador
 
 private const val BAD_NEWS = "Bad News"
 private const val GOOD_NEWS = "Good News"

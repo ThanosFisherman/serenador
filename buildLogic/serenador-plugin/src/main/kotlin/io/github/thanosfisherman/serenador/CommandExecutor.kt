@@ -1,6 +1,6 @@
-package io.github.thanosfisherman.serenador.plugin
+package io.github.thanosfisherman.serenador
 
-import io.github.thanosfisherman.serenador.plugin.commands.Command
+import io.github.thanosfisherman.serenador.commands.Command
 import org.gradle.api.Project
 import org.gradle.process.ExecResult
 
