@@ -3,12 +3,12 @@ package io.github.thanosfisherman.serenador.plugin.extensions
 import org.gradle.api.Action
 import org.gradle.api.Project
 import org.gradle.api.model.ObjectFactory
+import org.gradle.api.provider.Property
 import javax.inject.Inject
 
 open class SerenadorExtension @Inject constructor(objects: ObjectFactory) {
 
-    private var isShutTheFuckUpMutable = false
-    internal val isShutTheFuckUp get() = isShutTheFuckUpMutable
+    internal val isShutTheFuckUp: Property<Boolean> = objects.property(Boolean::class.java)
 
     /** Configure the inner DSL object, [PhraseBookHandler]. */
     val phraseBook: PhraseBookHandler = objects.newInstance(PhraseBookHandler::class.java)
@@ -19,7 +19,8 @@ open class SerenadorExtension @Inject constructor(objects: ObjectFactory) {
     }
 
     fun shutTheFuckUp(isShutTheFuck: Boolean) {
-        isShutTheFuckUpMutable = isShutTheFuck
+        isShutTheFuckUp.set(isShutTheFuck)
+        isShutTheFuckUp.disallowChanges()
     }
 
     companion object {

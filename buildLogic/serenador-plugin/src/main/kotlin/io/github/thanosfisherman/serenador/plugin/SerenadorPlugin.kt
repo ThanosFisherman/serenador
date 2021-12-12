@@ -12,7 +12,7 @@ class SerenadorPlugin : Plugin<Project> {
         val serenadorExt = project.initSerenadorExtension()
 
         project.afterEvaluate {
-            if (!serenadorExt.isShutTheFuckUp)
+            if (!serenadorExt.isShutTheFuckUp.getOrElse(false))
                 applyTaskExecutorListener(project)
         }
 
