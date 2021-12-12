@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "io.github.thanosfisherman.serenador.plugin"
-version = "SNAPSHOT"
+version = "1.0-SNAPSHOT"
 
 repositories {
     gradlePluginPortal()
@@ -41,7 +41,7 @@ dependencies {
 
 
 gradlePlugin {
-    plugins.register("serenador") {
+    plugins.create("serenador") {
         id = "serenador"
         implementationClass = "io.github.thanosfisherman.serenador.plugin.SerenadorPlugin"
     }
