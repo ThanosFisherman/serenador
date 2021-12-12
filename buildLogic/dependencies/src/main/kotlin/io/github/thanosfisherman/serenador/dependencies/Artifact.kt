@@ -40,5 +40,6 @@ object PluginArtifact {
     val PLUGIN_ID = MavenArtifact.ARTIFACT_GROUP
     val PLUGIN_NAME = "serenadorPlugin"
     val DISPLAY_NAME = "Serenador Plugin"
+    val VERSION_NAME = MavenArtifact.VERSION_NAME
 }
 

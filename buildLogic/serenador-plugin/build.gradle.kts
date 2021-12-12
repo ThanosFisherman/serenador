@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "io.github.thanosfisherman.serenador"
-version = "1.0"
+version = PluginArtifact.VERSION_NAME
 
 repositories {
     gradlePluginPortal()
