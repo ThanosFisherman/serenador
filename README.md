@@ -7,7 +7,7 @@
 
 --------------
 
-### :rotating_light:Currently only functional on Mac OS::rotating_light:
+### :rotating_light:Currently only functional on Mac OS:rotating_light:
 
 **Serenador** is a Gradle plugin that utilizes text-to-speech to give you feed back about your project's build status. Once installed you will be notified accordingly when your build succeeds or fails.
 
