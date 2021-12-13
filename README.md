@@ -2,9 +2,10 @@
 
 #### [View Releases and Changelogs](https://github.com/ThanosFisherman/serenador/releases)
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.thanosfisherman.serenador?label=Gradle&style=for-the-badge)](https://repo1.maven.org/maven2/io/github/thanosfisherman/serenador/serenador-plugin/)
-[![Hex.pm](https://img.shields.io/hexpm/l/plug?style=for-the-badge)]((https://opensource.org/licenses/Apache-2.0))
+[![Gradle Plugins Portal](https://img.shields.io/maven-metadata/v?color=Green&label=Gradle%20Plugins%20Portal&metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fio%2Fgithub%2Fthanosfisherman%2Fserenador%2Fio.github.thanosfisherman.serenador.gradle.plugin%2Fmaven-metadata.xml&style=for-the-badge)](https://plugins.gradle.org/plugin/io.github.thanosfisherman.serenador)
+[![Hex.pm](https://img.shields.io/hexpm/l/plug?style=for-the-badge&color=Green)](https://opensource.org/licenses/Apache-2.0)
 
+https://plugins.gradle.org/m2/io/github/thanosfisherman/serenador/io.github.thanosfisherman.serenador.gradle.plugin/maven-metadata.xml
 --------------
 
 ### :rotating_light:Currently only functional on Mac OSX:rotating_light:
