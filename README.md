@@ -1,4 +1,4 @@
-# Let me Serenade you 🎶
+# Let me serenade you 🎶
 
 #### [View Releases and Changelogs](https://github.com/ThanosFisherman/serenador/releases)
 
