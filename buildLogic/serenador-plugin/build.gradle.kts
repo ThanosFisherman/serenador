@@ -72,7 +72,6 @@ gradlePlugin {
     }
 }
 tasks.register("setupPluginKeys") {
-    println(rootProject.projectDir.toString())
     val propertiesFile = rootProject.file("local.properties")
     if (propertiesFile.exists() && propertiesFile.canRead()) {
         val properties = Properties()
