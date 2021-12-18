@@ -2,7 +2,7 @@ object MavenArtifact {
 
     val ARTIFACT_NAME = "serenador-plugin"
     val ARTIFACT_GROUP = "io.github.thanosfisherman.serenador"
-    val VERSION_NAME = "1.0"
+    val VERSION_NAME = "1.1"
     val POM_URL = "https://github.com/ThanosFisherman/serenador"
     val POM_SCM_URL = "https://github.com/ThanosFisherman/serenador"
     val POM_SCM_CONNECTION = "scm:git:github.com/ThanosFisherman/serenador.git"
