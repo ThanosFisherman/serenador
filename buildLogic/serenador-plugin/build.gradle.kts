@@ -21,10 +21,9 @@ repositories {
 
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
+    testLogging { showStandardStreams = true }
 }
-tasks.test {
-    useJUnitPlatform()
-}
+
 configure<JavaPluginExtension> {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8

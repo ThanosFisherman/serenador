@@ -1,17 +1,18 @@
 package io.github.thanosfisherman.serenador.listeners
 
-import io.github.thanosfisherman.serenador.CommandExecutor
-import io.github.thanosfisherman.serenador.executeCustom
-import io.github.thanosfisherman.serenador.executeFailure
-import io.github.thanosfisherman.serenador.executeSuccess
+import io.github.thanosfisherman.serenador.commandexecutors.CommandExecutor
 import io.github.thanosfisherman.serenador.extensions.SerenadorExtension
+import io.github.thanosfisherman.serenador.repositories.PhraseRepo
 import org.gradle.BuildListener
 import org.gradle.BuildResult
-import org.gradle.api.Project
 import org.gradle.api.initialization.Settings
 import org.gradle.api.invocation.Gradle
 
-class MyBuildListener(private val project: Project, private val serenadorExt: SerenadorExtension) : BuildListener {
+class MyBuildListener constructor(
+    private val commandExecutor: CommandExecutor,
+    private val phraseRepo: PhraseRepo,
+    private val serenadorExt: SerenadorExtension
+) : BuildListener {
     override fun settingsEvaluated(settings: Settings) {
     }
 
@@ -22,21 +23,27 @@ class MyBuildListener(private val project: Project, private val serenadorExt: Se
     }
 
     override fun buildFinished(result: BuildResult) {
-        val executor = CommandExecutor(project)
+
         if (result.failure != null) {
-            customOrDefault(serenadorExt.phraseBook.failPhrases, true, executor)
+            customOrDefault(serenadorExt.phraseBook.failPhrases, true, commandExecutor)
         } else {
-            customOrDefault(serenadorExt.phraseBook.successPhrases, false, executor)
+            customOrDefault(serenadorExt.phraseBook.successPhrases, false, commandExecutor)
         }
     }
 
     private fun customOrDefault(phrases: List<String>, isFail: Boolean, executor: CommandExecutor) {
         if (phrases.isEmpty() && isFail) {
-            executor.executeFailure()
+            val result = executor.execute(phraseRepo.getFailPhrasesWithVoice().random())
+            if (result.exitValue == 1) {
+                executor.execute(phraseRepo.getFailPhrases().random())
+            }
         } else if (phrases.isEmpty()) {
-            executor.executeSuccess()
+            val result = executor.execute(phraseRepo.getSuccessPhrasesWithVoice().random())
+            if (result.exitValue == 1) {
+                executor.execute(phraseRepo.getSuccessPhrases().random())
+            }
         } else {
-            executor.executeCustom(phrases)
+            executor.execute(phraseRepo.getCustomPhrases(phrases).random())
         }
     }
 }
