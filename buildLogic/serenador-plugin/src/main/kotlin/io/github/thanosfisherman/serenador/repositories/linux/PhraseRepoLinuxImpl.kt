@@ -14,7 +14,7 @@ internal class PhraseRepoLinuxImpl(private val source: PhrasesSource) : PhraseRe
 
     override fun getSuccessPhrasesWithVoice(): List<Command> {
         val phrases = getSuccessPhrases().map { it as SpdSayLinuxCommand }
-        phrases.getOrNull(0)?.voice = "male1"
+        phrases.getOrNull(0)?.voice = "female1"
         phrases.getOrNull(1)?.voice = "female2"
         phrases.getOrNull(2)?.voice = "child_male"
         phrases.getOrNull(3)?.voice = "child_female"
