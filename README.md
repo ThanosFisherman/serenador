@@ -36,7 +36,7 @@ Installation
 
 ```kotlin
 plugins {
-  id("io.github.thanosfisherman.serenador") version "1.1"
+  id("io.github.thanosfisherman.serenador") version "1.2"
 }
 ```
 
@@ -50,7 +50,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath("io.github.thanosfisherman.serenador:serenador-plugin:1.1")
+    classpath("io.github.thanosfisherman.serenador:serenador-plugin:1.2")
   }
 }
 
