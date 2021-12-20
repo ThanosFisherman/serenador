@@ -13,7 +13,7 @@ object PhrasesSource {
     private fun getPhrases(path: String): List<String> {
         val resInputStream = javaClass.classLoader.getResourceAsStream(path) ?: return emptyList()
         return resInputStream.bufferedReader().use { buff ->
-            buff.readLines().filter { it.isNotBlank() && !it.contains("#") }
+            buff.readLines().filter { it.isNotBlank() && !it.contains("#") }.map { it.trim() }
         }
     }
 }

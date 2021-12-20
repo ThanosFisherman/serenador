@@ -33,8 +33,8 @@ internal class PhraseRepoLinuxImpl(private val source: PhrasesSource) : PhraseRe
         phrases.getOrNull(2)?.voice = "male1"
         phrases.getOrNull(3)?.voice = "male2"
         phrases.getOrNull(4)?.voice = "male2"
-        phrases.getOrNull(5)?.voice = "male2"
-        phrases.getOrNull(6)?.voice = "male2"
+        phrases.getOrNull(5)?.voice = "male3"
+        phrases.getOrNull(6)?.voice = "male3"
         return phrases
     }
 
