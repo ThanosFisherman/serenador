@@ -14,9 +14,20 @@
 Prerequisites
 ---------------
 
-As Serenador is currently available only for Mac PCs it's highly recommended that you install the **English (United States) -- Novelty** voices via **Accesibility** settings for extra fun. 🥳
+### MacOS
+
+Serenador leverages `say` command on Mac PCs under the hood. Moreover it's highly recommended that you install the **English (United States) -- Novelty** voices via **Accesibility** settings for extra fun. 🥳
 
 ![image](https://user-images.githubusercontent.com/4888330/145729718-3f2b4652-b8ce-4352-ba3c-f010e0401a3c.png)
+
+### Linux (Preferably Ubuntu derivatives)
+Serenador leverages `spd-say` command from [speechd](https://github.com/brailcom/speechd) which usually comes pre-installed on most ubuntu-based distros. If it's not you can install it via the following command
+
+`sudo apt-get install speech-dispatcher`
+
+### Windows
+
+Under Construction...
 
 Installation
 ---------------
