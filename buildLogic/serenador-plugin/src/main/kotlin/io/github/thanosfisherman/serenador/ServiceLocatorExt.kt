@@ -8,15 +8,20 @@ import io.github.thanosfisherman.serenador.repositories.linux.PhraseRepoLinuxImp
 import io.github.thanosfisherman.serenador.repositories.macos.PhraseRepoMacImpl
 import io.github.thanosfisherman.serenador.sources.PhrasesSource
 import org.gradle.api.Project
+import org.gradle.api.model.ObjectFactory
 
 
 fun Project.provideMacBuildListener(serenadorExtension: SerenadorExtension): MyBuildListener {
     return MyBuildListener(MacCommandExecutor(this), PhraseRepoMacImpl(PhrasesSource), serenadorExtension)
 }
 
-fun Project.provideLinuxBuildListener(serenadorExtension: SerenadorExtension): MyBuildListener {
+fun Project.provideLinuxBuildListener(
+    objectFactory: ObjectFactory,
+    serenadorExtension: SerenadorExtension
+): MyBuildListener {
+    val cmd = objectFactory.newInstance(LinuxCommandExecutor::class.java)
     return MyBuildListener(
-        LinuxCommandExecutor(this),
+        cmd,
         PhraseRepoLinuxImpl(PhrasesSource),
         serenadorExtension
     )
