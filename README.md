@@ -11,6 +11,10 @@
 
 **Serenador** is a Gradle plugin that utilizes text-to-speech to give you feedback about your project's build status. Once installed you will be notified accordingly either when your build succeeds or fails. Inspired by [saydle](https://github.com/handstandsam/saydle).
 
+### Demo
+
+https://user-images.githubusercontent.com/4888330/147281809-4e47ce25-1068-4b2d-9317-1c27106a880a.mov
+
 Prerequisites
 ---------------
 
