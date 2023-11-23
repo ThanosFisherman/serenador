@@ -8,7 +8,7 @@ plugins {
     `java-gradle-plugin`
     id("com.gradle.plugin-publish") version "0.18.0"
     `maven-publish`
-    id("dependencies")
+    id("serenador.dependencies")
 }
 
 group = "io.github.thanosfisherman.serenador"
@@ -25,12 +25,12 @@ tasks.withType<Test>().configureEach {
 }
 
 configure<JavaPluginExtension> {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 dependencies {

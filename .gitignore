@@ -3,3 +3,5 @@
 /.gradle/
 /serenador-sample/build/
 local.properties
+/buildSrc/build/
+/buildSrc/.gradle/
