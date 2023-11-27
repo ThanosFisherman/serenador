@@ -1,7 +1,7 @@
 
 plugins {
     java
-    kotlin("jvm") version Deps.kotlinVersion
+    kotlin("jvm") version Dependencies.kotlinVersion
 }
 
 buildscript {
